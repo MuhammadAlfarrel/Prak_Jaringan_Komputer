@@ -4,7 +4,7 @@ import socket
 import sys
 import argparse
 
-host = '192.168.10.8'
+host = 'localhost'
 data_payload = 2048
 
 def echo_client(port):
