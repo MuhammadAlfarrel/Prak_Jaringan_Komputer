@@ -4,7 +4,7 @@ import socket
 import sys
 import argparse
 
-host = 'localhost'
+host = '192.168.10.8'
 data_payload = 2048
 
 def echo_client(port):
@@ -31,4 +31,7 @@ def echo_client(port):
 
 if __name__ == '__main__':
     parser = argparse.ArgumentParser(description='Socket Client Example')
-    parser.add_argument('--port', action="store", dest="po
+    parser.add_argument('--port', action="store", dest="port", type=int, required=True)
+    given_args = parser.parse_args()
+    port = given_args.port  
+    echo_client(port)
